@@ -1,20 +1,15 @@
 import filesystem from "fs"
-let fruit1: string = filesystem.readFileSync("./input.txt", "utf-8")
+let userInput: string = filesystem.readFileSync("./input.txt", "utf-8")
 //let fruit1: string = "cseresznye"
 
+let output: string = ""
 
 
-
-for (let roundNumber = 1; roundNumber <= 300; roundNumber++)
+if (userInput !== "fuck")
 {
-  fruit1 += "!"
+  output = userInput
 }
 
 
 //console.log(fruit1)
-filesystem.writeFileSync("./output.txt", fruit1, "utf-8")
-
-
-
-
-
+filesystem.writeFileSync("./output.txt", output, "utf-8")
